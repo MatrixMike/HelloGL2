@@ -22,9 +22,9 @@
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cmath>
 
 #define  LOG_TAG    "libgl2jni"
 #define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
@@ -57,7 +57,7 @@ auto gFragmentShader =
 GLuint loadShader(GLenum shaderType, const char* pSource) {
     GLuint shader = glCreateShader(shaderType);
     if (shader) {
-        glShaderSource(shader, 1, &pSource, NULL);
+        glShaderSource(shader, 1, &pSource, nullptr);
         glCompileShader(shader);
         GLint compiled = 0;
         glGetShaderiv(shader, GL_COMPILE_STATUS, &compiled);
@@ -67,7 +67,7 @@ GLuint loadShader(GLenum shaderType, const char* pSource) {
             if (infoLen) {
                 char* buf = (char*) malloc(infoLen);
                 if (buf) {
-                    glGetShaderInfoLog(shader, infoLen, NULL, buf);
+                    glGetShaderInfoLog(shader, infoLen, nullptr, buf);
                     LOGE("Could not compile shader %d:\n%s\n",
                             shaderType, buf);
                     free(buf);
@@ -143,9 +143,10 @@ bool setupGraphics(int w, int h) {
     return true;
 }
 
-const GLfloat gTriangleVertices[] = { 0.0f, 0.5f,
+const GLfloat gTriangleVertices[] = {
+         0.0f,  0.5f,
         -0.5f, -0.5f,
-        0.5f, -0.5f };
+         0.5f, -0.5f };
 
 void renderFrame() {
     static float grey;

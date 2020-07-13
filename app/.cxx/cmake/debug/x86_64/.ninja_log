@@ -1,3 +1,7 @@
 # ninja log v5
 0	246	1594646822	CMakeFiles/gl2jni.dir/gl_code.cpp.o	792d95fe462942ce
 246	272	1594646822	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/x86_64/libgl2jni.so	5b51afd1d594de2b
+0	270	1594647542	CMakeFiles/gl2jni.dir/gl_code.cpp.o	792d95fe462942ce
+270	299	1594647542	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/x86_64/libgl2jni.so	5b51afd1d594de2b
+0	253	1594647750	CMakeFiles/gl2jni.dir/gl_code.cpp.o	792d95fe462942ce
+253	285	1594647750	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/x86_64/libgl2jni.so	5b51afd1d594de2b
