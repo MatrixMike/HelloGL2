@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/mikeh/Android/Sdk/ndk/21.2.6472646/build/cmake/platforms.cmake",
+    "/home/mikeh/AndroidStudioProjects/HelloGL2/app/src/main/cpp/CMakeLists.txt",
+    "/home/mikeh/Android/Sdk/ndk/21.2.6472646/build/cmake/android.toolchain.cmake"
+  ],
+  "cleanCommands": [
+    "/home/mikeh/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/mikeh/AndroidStudioProjects/HelloGL2/app/.cxx/cmake/debug/x86_64\" clean"
+  ],
+  "buildTargetsCommand": "/home/mikeh/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/mikeh/AndroidStudioProjects/HelloGL2/app/.cxx/cmake/debug/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "gl2jni-Debug-x86_64": {
+      "artifactName": "gl2jni",
+      "buildCommand": "/home/mikeh/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/mikeh/AndroidStudioProjects/HelloGL2/app/.cxx/cmake/debug/x86_64\" gl2jni",
+      "abi": "x86_64",
+      "output": "/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/x86_64/libgl2jni.so",
+      "runtimeFiles": []
+    }
+  }
+}
