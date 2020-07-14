@@ -156,6 +156,7 @@ void renderFrame() {
     }
     glClearColor(grey, grey, grey, 1.0f);
     checkGlError("glClearColor");
+
     glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
     checkGlError("glClear");
 
@@ -164,8 +165,10 @@ void renderFrame() {
 
     glVertexAttribPointer(gvPositionHandle, 2, GL_FLOAT, GL_FALSE, 0, gTriangleVertices);
     checkGlError("glVertexAttribPointer");
+
     glEnableVertexAttribArray(gvPositionHandle);
     checkGlError("glEnableVertexAttribArray");
+
     glDrawArrays(GL_TRIANGLES, 0, 3);
     checkGlError("glDrawArrays");
 }

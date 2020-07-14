@@ -1,4 +1,4 @@
-#Mon Jul 13 23:42:31 AEST 2020
+#Tue Jul 14 13:33:10 AEST 2020
 base.0=/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
