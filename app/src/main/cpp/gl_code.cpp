@@ -152,10 +152,26 @@ const GLfloat gTriangleVertices[] = {
         -0.5f, -0.5f,
          0.5f, -0.5f };
 
-const GLfloat gTriangleVertices2[] = {  //orange
+/*const GLfloat gTriangleVertices2[] = {  //orange
         1.0f,  0.0f,
         1.0f, 0.5f,
         0.5f, 0.5f };
+*/
+const GLfloat gTriangleVertices2[] = {
+        // first triangle
+        0.5f,  0.5f, 0.0f,  // top right
+        0.5f, -0.5f, 0.0f,  // bottom right
+        -0.5f,  0.5f, 0.0f,  // top left
+        // second triangle
+        0.5f, -0.5f, 0.0f,  // bottom right
+        -0.5f, -0.5f, 0.0f,  // bottom left
+        -0.5f,  0.5f, 0.0f   // top left
+};
+//    std::vector<unsigned int> indices;
+    GLuint elementbuffer;
+//    glGenBuffers(1, &elementbuffer);
+//    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+//    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), &indices[0], GL_STATIC_DRAW);
 
 void renderFrame() {
     static float grey;
