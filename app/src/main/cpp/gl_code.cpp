@@ -120,6 +120,7 @@ GLuint createProgram(const char* pVertexSource, const char* pFragmentSource) {
 
 GLuint gProgram;
 GLuint gvPositionHandle;
+GLuint gvPositionHandle2;
 
 bool setupGraphics(int w, int h) {
     printGLString("Version", GL_VERSION);
@@ -135,6 +136,9 @@ bool setupGraphics(int w, int h) {
     }
     gvPositionHandle = glGetAttribLocation(gProgram, "vPosition");
     checkGlError("glGetAttribLocation");
+
+    gvPositionHandle2 = glGetAttribLocation(gProgram, "vPosition");
+    checkGlError("glGetAttribLocation");
     LOGI("glGetAttribLocation(\"vPosition\") = %d\n",
             gvPositionHandle);
 
@@ -147,6 +151,11 @@ const GLfloat gTriangleVertices[] = {
          0.0f,  0.5f,
         -0.5f, -0.5f,
          0.5f, -0.5f };
+
+const GLfloat gTriangleVertices2[] = {  //orange
+        1.0f,  0.0f,
+        1.0f, 0.5f,
+        0.5f, 0.5f };
 
 void renderFrame() {
     static float grey;
@@ -166,7 +175,13 @@ void renderFrame() {
     glVertexAttribPointer(gvPositionHandle, 2, GL_FLOAT, GL_FALSE, 0, gTriangleVertices);
     checkGlError("glVertexAttribPointer");
 
+    glVertexAttribPointer(gvPositionHandle2, 2, GL_FLOAT, GL_FALSE, 0, gTriangleVertices2);
+    checkGlError("glVertexAttribPointer");
+
     glEnableVertexAttribArray(gvPositionHandle);
+    checkGlError("glEnableVertexAttribArray");
+
+    glEnableVertexAttribArray(gvPositionHandle2);
     checkGlError("glEnableVertexAttribArray");
 
     glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -174,11 +189,11 @@ void renderFrame() {
 }
 
 extern "C" {
-    JNIEXPORT void JNICALL Java_com_android_gl2jni_GL2JNILib_init(JNIEnv * env, jobject obj,  jint width, jint height);
+    JNIEXPORT void JNICALL Java_com_android_gl2jni_GL2JNILib_init(JNIEnv * env, jclass obj,  jint width, jint height);
     JNIEXPORT void JNICALL Java_com_android_gl2jni_GL2JNILib_step(JNIEnv * env, jobject obj);
 };
 
-JNIEXPORT void JNICALL Java_com_android_gl2jni_GL2JNILib_init(JNIEnv * env, jobject obj,  jint width, jint height)
+JNIEXPORT void JNICALL Java_com_android_gl2jni_GL2JNILib_init(JNIEnv * env, jclass obj,  jint width, jint height)
 {
     setupGraphics(width, height);
 }
