@@ -134,8 +134,8 @@ bool setupGraphics(int w, int h) {
         LOGE("Could not create program.");
         return false;
     }
-    gvPositionHandle = glGetAttribLocation(gProgram, "vPosition");
-    checkGlError("glGetAttribLocation");
+//    gvPositionHandle = glGetAttribLocation(gProgram, "vPosition");
+//    checkGlError("glGetAttribLocation");
 
     gvPositionHandle2 = glGetAttribLocation(gProgram, "vPosition");
     checkGlError("glGetAttribLocation");
@@ -147,16 +147,18 @@ bool setupGraphics(int w, int h) {
     return true;
 }
 
-const GLfloat gTriangleVertices[] = {
+/* const GLfloat gTriangleVertices[] = {
          0.0f,  0.5f,
         -0.5f, -0.5f,
          0.5f, -0.5f };
+*/
 
 /*const GLfloat gTriangleVertices2[] = {  //orange
         1.0f,  0.0f,
         1.0f, 0.5f,
         0.5f, 0.5f };
 */
+// https://learnopengl.com/Getting-started/Hello-Triangle
 const GLfloat gTriangleVertices2[] = {
         // first triangle
         0.5f,  0.5f, 0.0f,  // top right
@@ -166,7 +168,18 @@ const GLfloat gTriangleVertices2[] = {
         0.5f, -0.5f, 0.0f,  // bottom right
         -0.5f, -0.5f, 0.0f,  // bottom left
         -0.5f,  0.5f, 0.0f   // top left
-};
+    };
+    unsigned int indices[] = {  // note that we start from 0!
+        0, 1, 3,   // first triangle
+        1, 2, 3    // second triangle
+    };
+    unsigned int EBO;
+  //  glGenBuffers(1, &EBO);
+/*    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    */
 //    std::vector<unsigned int> indices;
     GLuint elementbuffer;
 //    glGenBuffers(1, &elementbuffer);
@@ -188,19 +201,19 @@ void renderFrame() {
     glUseProgram(gProgram);
     checkGlError("glUseProgram");
 
-    glVertexAttribPointer(gvPositionHandle, 2, GL_FLOAT, GL_FALSE, 0, gTriangleVertices);
-    checkGlError("glVertexAttribPointer");
+//    glVertexAttribPointer(gvPositionHandle, 2, GL_FLOAT, GL_FALSE, 0, gTriangleVertices);
+//    checkGlError("glVertexAttribPointer");
 
     glVertexAttribPointer(gvPositionHandle2, 2, GL_FLOAT, GL_FALSE, 0, gTriangleVertices2);
     checkGlError("glVertexAttribPointer");
 
-    glEnableVertexAttribArray(gvPositionHandle);
-    checkGlError("glEnableVertexAttribArray");
+//    glEnableVertexAttribArray(gvPositionHandle);
+//    checkGlError("glEnableVertexAttribArray");
 
-    glEnableVertexAttribArray(gvPositionHandle2);
-    checkGlError("glEnableVertexAttribArray");
+    glEnableVertexAttribArray(gvPositionHandle2);  // re-enable
+    checkGlError("glEnableVertexAttribArray");		// re-enable
 
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
     checkGlError("glDrawArrays");
 }
 
