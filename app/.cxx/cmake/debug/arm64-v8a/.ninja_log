@@ -39,3 +39,7 @@
 261	296	1594819538	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/arm64-v8a/libgl2jni.so	a9c1d266a7264b69
 15	483	1594904219	CMakeFiles/gl2jni.dir/gl_code.cpp.o	ec22f72c2acf5a5
 483	907	1594904219	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/arm64-v8a/libgl2jni.so	a9c1d266a7264b69
+15	661	1595400642	CMakeFiles/gl2jni.dir/gl_code.cpp.o	ec22f72c2acf5a5
+661	1425	1595400643	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/arm64-v8a/libgl2jni.so	a9c1d266a7264b69
+1	257	1595401142	CMakeFiles/gl2jni.dir/gl_code.cpp.o	ec22f72c2acf5a5
+257	293	1595401142	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/arm64-v8a/libgl2jni.so	a9c1d266a7264b69

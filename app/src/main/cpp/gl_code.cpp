@@ -213,7 +213,7 @@ void renderFrame() {
     glEnableVertexAttribArray(gvPositionHandle2);  // re-enable
     checkGlError("glEnableVertexAttribArray");		// re-enable
 
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    glDrawArrays(GL_LINE_LOOP, 0, 6);
     checkGlError("glDrawArrays");
 }
 

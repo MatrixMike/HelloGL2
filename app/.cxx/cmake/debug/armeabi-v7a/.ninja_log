@@ -39,3 +39,7 @@
 247	275	1594819537	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libgl2jni.so	8ccae8896844105c
 16	2547	1594904217	CMakeFiles/gl2jni.dir/gl_code.cpp.o	7974ecdf48d35153
 2547	3331	1594904218	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libgl2jni.so	8ccae8896844105c
+16	2394	1595400640	CMakeFiles/gl2jni.dir/gl_code.cpp.o	7974ecdf48d35153
+2394	4006	1595400641	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libgl2jni.so	8ccae8896844105c
+0	243	1595401142	CMakeFiles/gl2jni.dir/gl_code.cpp.o	7974ecdf48d35153
+243	281	1595401142	/home/mikeh/AndroidStudioProjects/HelloGL2/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libgl2jni.so	8ccae8896844105c
